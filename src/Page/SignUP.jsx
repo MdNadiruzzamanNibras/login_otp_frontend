@@ -24,22 +24,34 @@ const SignUp = () => {
   };
 
   return (
-    <div>
-      <h2>Sign Up</h2>
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button onClick={handleSignUp}>Sign Up</button>
-      {message && <p>{message}</p>}
+    <div className="flex justify-center items-center h-3/6">
+      <div className="w-96">
+        <h2 className="text-3xl text-center my-9">Sign Up</h2>
+        <input
+          type="email"
+          placeholder="Email"
+          className="border-2 border-gray-500 w-full text-xl py-2 rounded pl-2 my-3"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />{" "}
+        <br />
+        <input
+          type="password"
+          placeholder="Password"
+          className="border-2 border-gray-500 w-full text-xl py-2 rounded pl-2 my-3"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />{" "}
+        <br />
+        <button
+          onClick={handleSignUp}
+          className="bg-black text-white text-xl text-center w-full py-2"
+        >
+          Sign Up
+        </button>{" "}
+        <br />
+        {message && <p>{message}</p>}
+      </div>
     </div>
   );
 };
