@@ -4,6 +4,7 @@ import Home from "./Page/Home";
 import SignUp from "./Page/SignUP";
 import SignIN from "./Page/SignIn";
 import ForgetPass from "./Page/ForgetPass";
+import NewPassword from "./Page/NewPassword";
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
       {
         path: "/forgetPass",
         element: <ForgetPass />,
+      },
+      {
+        path: "/otp",
+        element: <NewPassword />,
       },
     ],
   },
